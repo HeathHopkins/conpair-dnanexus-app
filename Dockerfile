@@ -16,7 +16,7 @@ RUN apt-get install -y git python-numpy python-scipy
 RUN mkdir /gatk3
 WORKDIR /gatk3
 RUN gsutil cp gs://gatk-software/package-archive/gatk/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef.tar.bz2 GenomeAnalysisTK-3.8-1.tar.bz2
-RUN tar xjf GenomeAnalysisTK-3.8-1.tar.bz2 --strip-components=1 --warning=no-unknown-keyword GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar
+RUN tar xjf GenomeAnalysisTK-3.8-1.tar.bz2 --strip-components=1 --warning=no-unknown-keyword --no-same-owner GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar
 RUN rm GenomeAnalysisTK-3.8-1.tar.bz2
 
 # download Conpair
